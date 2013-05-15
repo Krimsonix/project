@@ -1,5 +1,4 @@
-Project Framework with Bootstrap
+Lance's PHP Project
 ================================
 
-This codebase is the base framework for your project with bootstrap
-already enabled.
+My Personal Project w/ Framework-Bootstrap
