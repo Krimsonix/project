@@ -2,7 +2,7 @@
 
 
 # Setup Applictation Directory Structure
-define("APP_DOC_ROOT", "/framework-bootstrap");
+define("APP_DOC_ROOT", "/project");
 define("APP_DIR_ROOT", dirname ( dirname ( __FILE__ ) ) );
 
 # These should be fine as is
@@ -17,7 +17,7 @@ define("APP_IMG",        APP_DOC_ROOT . "/img");
 define("DEBUG", 0);
 
 # Set PHP Error Output
-ini_set('error_reporting','E_ALL');
+//ini_set('error_reporting','E_ALL');
 
 
 # Database Configuration
