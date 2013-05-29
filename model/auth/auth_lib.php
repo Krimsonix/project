@@ -2,30 +2,32 @@
 
 function processAuth($user, $password) {
 
-    $userList = array();
-    $userList["lance"] = "test1234";
-    $userList["admin"] = "admin1234";
-    $userList["user"] = "user1234";
-
     $auth = array();
     $auth["return"] = false;
     $auth["message"] = "";
 
-    //Check if user exists
-    $userArray = array_keys($userList);
-    if (in_array($user, $userArray)){
+    $sql = "SELECT *
+            FROM auth_user
+            WHERE username = '$user'";
+
+    $res = mysql_query($sql);
+    $row = mysql_fetch_array($res);
+
+    // Check if user exists
+    if ($row) {
 
         //check if password is valid
-        if ($password == $userList[$user]) {
+        if ($row["password"] == md5($pass)){
             $auth["return"] = true;
-        } else {
+        }
+        else {
             $auth["message"] = "Password is not correct.";
         }
     }
     else {
-        $auth["message"] = "User does not exist.";
+            $auth["message"] = "User does not exist.";
     }
 
-
     return ($auth);
+
 }

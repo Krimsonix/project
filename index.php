@@ -25,7 +25,7 @@ switch ($_GET["q"]) {
         break;
 
     case "auth":
-        include( APP_CONTROLLER . "/authCo ntroller.php");
+        include( APP_CONTROLLER . "/authController.php");
         break;
 
     default:

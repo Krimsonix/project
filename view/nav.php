@@ -21,7 +21,7 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome
 <?php
-                print ( !empty($_SESSION["username"]) ? $_SESSION["username"] : "Guest" );
+                print (!empty($_SESSION["username"]) ? $_SESSION["username"] : "Guest");
 ?>
                   </a>
                   <ul class="dropdown-menu">
