@@ -17,7 +17,7 @@ function processAuth($user, $password) {
     if ($row) {
 
         //check if password is valid
-        if ($row["password"] == md5($pass)){
+        if ($row["password"] == md5($password)){
             $auth["return"] = true;
         }
         else {
